@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Admin Home</title>
+  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  @**@<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/imagehover.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Auq<span>aat</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+           
+           <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">Manage Students</a>
+           </li>
+            <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="" asp-controller="Teacher" asp-action="TeacherIndex">Manage Teachers</a>
+           </li>
+           <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Index">Manage Courses</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link text-dark" asp-area="" asp-controller="Announcement" asp-action="Index">Make an Announcement</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link text-dark" asp-area="" asp-controller="AssignTeacher" asp-action="Index">Assign Teachers</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Log out</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Navigation bar-->
+  <!--Banner-->
+  <div class="banner">
+    <div class="bg-color">
+      <div class="container">
+        <div class="row">
+          <div class="banner-text text-center">
+            <div class="text-border">
+              <h2 class="text-dec">Welcome Admin!</h2>
+            </div>
+            <div class="intro-para text-center quote">
+              <p class="big-text">Managing others is . . . A big responsibility</p>
+              <p class="small-text">If the University Admin is strong, motivated and a good manager who clearly outlines expectations for staff and students, then the institution tends to make progress.<br/><br/>...Lisa Gross.</p>
+
+            </div>
+            <a href="#feature" class="mouse-hover">
+              <div class="mouse"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Banner-->
+  <!--Feature-->
+  
+   
+  
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+ 
+</body>
+
+</html>

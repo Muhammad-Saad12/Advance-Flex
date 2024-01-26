@@ -1,0 +1,99 @@
+﻿@model Course
+<head>
+  <title>Create Course</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  @**@<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/imagehover.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Auq<span>aat</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AdminHome">Home</a>
+           <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">Manage Students</a>
+           </li>
+            <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="" asp-controller="Teacher" asp-action="TeacherIndex">Manage Teachers</a>
+           </li>
+           <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Index">Manage Courses</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link text-dark" asp-area="" asp-controller="Announcement" asp-action="Index">Make an Announcement</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link text-dark" asp-area="" asp-controller="AssignTeacher" asp-action="Index">Assign Teachers</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Log out</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Navigation bar-->
+  <br/><br/><br/><br/>
+  <div class="container">
+      <form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add New Course</h2>
+            <hr />
+        </div>
+       <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="Id"></label>
+            <input asp-for="Id" class="form-control" />
+           <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CreditHour"></label>
+            <input asp-for="CreditHour" class="form-control" />
+           @* <span asp-validation-for="Name" class="text-danger"></span>*@
+        </div>
+         <div class="mb-3">
+            <label asp-for="GradingPolicy"></label>
+            <input asp-for="GradingPolicy" class="form-control" />
+           @* <span asp-validation-for="Expertise" class="text-danger"></span>*@
+           <br/>
+        </div>
+         
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a asp-controller="Course" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to List
+        </a>
+        <br/><br/>
+    </div>
+
+</form>
+</div>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+  
+  </body>

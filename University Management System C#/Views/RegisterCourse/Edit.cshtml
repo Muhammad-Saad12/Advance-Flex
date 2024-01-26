@@ -1,0 +1,87 @@
+﻿@model RegisterCourse
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Registeration</title>
+
+  <link rel="stylesheet" href="~/css/facultycard.css" asp-append-version="true" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/imagehover.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  
+
+</head>
+<body>
+<!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Auq<span>aat</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Announcement" asp-action="StudentAnnouncements">Home</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link text-dark" asp-area="" asp-controller="Teacher" asp-action="Index">View Faculty</a>
+           </li>
+            <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="RegisterCourse" asp-action="Index">Register Course</a>
+            </li>
+           <li class="nav-item">
+             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Log out</a>
+           </li>
+  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Navigation bar-->
+
+<br/><br/><br/><br/><br/><br/>
+<div class="container">
+        <form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Registeration</h2>
+            <hr />
+        </div>
+       @* <div asp-validation-summary="All"></div>*@
+        <div class="mb-3">
+            <label asp-for="StudentId"></label>
+            <input asp-for="StudentId" class="form-control" />
+            <span asp-validation-for="StudentId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CourseId"></label>
+            <input asp-for="CourseId" class="form-control" />
+            <span asp-validation-for="CourseId" class="text-danger"></span>
+
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+        <a asp-controller="RegisterCourse" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back to List
+        </a>
+    </div>
+
+</form>
+
+</div>
+    @section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+    <br/>
+</body>
